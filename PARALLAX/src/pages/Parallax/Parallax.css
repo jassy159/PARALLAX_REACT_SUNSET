@@ -1,0 +1,261 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+body{
+    margin: 0;
+}
+main{
+    height: 3000px;
+    background-color: #282a57;
+    scroll-behavior: smooth;
+    overflow: hidden;
+    
+}
+nav{
+    z-index: 10000;
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    font-size: 10px;
+    position:absolute; 
+    color: wheat;  
+    font-size: 1em;
+}
+.navigations{
+    width: 80%;
+    justify-content: space-evenly;
+    display: flex;
+    margin: 0  0 0  20px;
+    filter: drop-shadow(2px 2px 3px black);
+}
+.parallax_sun{
+    top: 200px;
+    width:450px;
+    background-size: contain;
+    height: 450px;
+    background-repeat: no-repeat;
+    position: relative; 
+    background-image: url(../../assets/IMAGES/sun.svg);
+    z-index: 10;
+    margin: 0 auto;
+    
+}
+.parallax{
+    position: relative;
+    overflow: hidden;
+    transition-delay: 2ms;
+    width: 100%;
+    height: 1500px;
+    background: linear-gradient(180deg, #0025a0, #c96c4b 20%, #ebe300)
+}
+.parallax_mountain_1,.parallax_mountain_2,.parallax_mountain_3{
+   
+    top: 350px;
+    width: 100%;
+    background-size: contain;
+    height: -webkit-fill-available;
+    background-repeat: no-repeat;
+    position: absolute; 
+    
+    z-index: 100;
+    margin: 0 auto;
+}
+.parallax_mountain_1{
+    background-image: url(../../assets/IMAGES/mountain-1.svg);
+    z-index: 10;
+}
+.parallax_mountain_2{
+    background-image: url(../../assets/IMAGES/mountain-2.svg);
+    z-index: 10;
+}
+.parallax_mountain_3{
+    height: 927px;
+    background-image: url(../../assets/IMAGES/mountain-3.svg);
+    z-index: 10;
+}
+.parallax_cloud_left,.parallax_cloud_right{
+  
+    width: 100%;
+    height: 340px;
+    position: absolute;
+    z-index: 1000;
+    
+    opacity: 50%;
+    top: 0px;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.parallax_cloud_left{
+    background-image: url(../../assets/IMAGES/clouds-left.svg);
+    left: 0;
+}
+.parallax_cloud_right{
+    background-image: url(../../assets/IMAGES/clouds-right.svg);
+    
+    background-position: right;
+}
+
+    .parallax_cloud_bottomleft {
+        width: 100%;
+        height: auto;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: 1;
+        top: 234px; /* Adjust positioning based on your layout */
+    }
+
+
+.main_text{
+    width: 100%;
+    color: white;
+    font-size: 2.5em;
+    font-family: "Orbitron", sans-serif;
+    z-index: 0;
+    top: 410px;
+    position: absolute; 
+    display: flex;
+    justify-content: center;
+  font-weight: 900;
+    margin: 0 auto;
+}
+.hide{
+    display: none;
+}
+.About{
+    position: relative;
+    top: 500px;
+    margin: 30px;
+    width: -webkit-fill-available;
+    padding: 20px;
+    border-radius: 20px;
+    
+    color:#fff;
+    padding: 30px;
+}
+.About h1{
+    margin: 0;
+    font-size: 1.5em;
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+}
+.About p{
+    font-size: .5em;
+    font-family: "Poppins", sans-serif;
+    font-weight: 100;
+}
+.stars{
+    width: 100%;
+    height: auto;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+    top: 100px;
+    opacity: 0.5;
+}
+.skills{
+    position: relative;
+    top: 300px;
+    margin: 30px;
+    width: -webkit-fill-available;
+    padding: 20px;
+    border-radius: 20px;
+    
+    color:#fff;
+    padding: 30px;
+}
+.skills h1{
+    margin-top:100px;
+    
+    font-size: 1.5em;
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+}
+.back{
+    
+    width: 80%;
+    height: 200px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-row-gap: 100px;
+    margin: 0 auto;
+    
+}
+.backimg{
+    width: 200px;
+    height: auto;
+    margin: 0 auto;
+    transform: rotate(20deg);
+}
+.back img{
+    width: 150px;
+    height: auto;
+    animation: rotate  linear  infinite;
+}
+.backimg:nth-child(1){animation-duration: 3s;}
+.backimg:nth-child(2){animation-duration: 3s;animation-direction: reverse;}
+.backimg:nth-child(3){animation-duration: 2s;}
+.backimg:nth-child(4){animation-duration: 4s;animation-direction: reverse;}
+.backimg:nth-child(5){animation-duration: 3s;}
+.backimg:nth-child(6){animation-duration: 4s;animation-direction: reverse;}
+@keyframes rotate {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+@media (max-width:700px) {
+    .coverer{
+        width: 100%;
+        height: 80%;
+        position: relative;
+        z-index: -10;
+        bottom: 0;
+        background-color: #282a57;
+        margin-top:200px
+    }
+    .parallax_sun{
+        width: 300px;
+        height: 300px;
+    }
+    .parallax_cloud_left,.parallax_cloud_right{
+    }
+    .parallax{
+        height: 1204px;
+    }
+    .main_text{
+        font-size: 0.5em;
+    }
+    .About{
+        margin: 5px;
+        padding: 10px;
+    }
+    .About h1{
+        font-size: 0.5em;
+    }
+    .About p{
+        font-size: 0.3em;
+    }
+    .skills{
+        margin: 5px;
+        padding: 10px;
+    }
+    .skills h1{
+        font-size: 0.5em;
+    }
+    .skills p{
+        font-size: 0.3em;
+    }
+    .back{
+        
+        height: 90px!important;
+        grid-row-gap: 10px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .backimg{
+        width: 90px!important;
+        height: auto;
+    }
+}
